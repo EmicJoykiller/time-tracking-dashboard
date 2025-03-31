@@ -144,3 +144,30 @@ h6 {
   white-space: nowrap;
   width: 1px;
 }
+
+body {
+    background-color: var(--clr-primary-900);
+    color: var(--clr-primary-100);
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1110px;
+    width: calc(100% - 2rem * 2);
+    max-height: 520px;
+    height: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+}
