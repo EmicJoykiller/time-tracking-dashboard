@@ -171,3 +171,225 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.875rem;
 }
+
+.profile__card {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+}
+
+.profile__card {
+    display: grid;
+    grid-template-rows: auto min-content;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.top-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.625rem;
+    line-height: 1.2;
+}
+
+.profile__top {
+    border-radius: var(--border-radius);
+}
+
+.top-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.top-container img {
+    width: 78px;
+    aspect-ratio: 1/1;
+    border: 3px solid var(--clr-primary-100);
+    border-radius: 50%;
+}
+
+
+.profile__bottom {
+    padding: var(--padding-main);
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+
+}
+
+
+.profile__bottom a:link {
+    color: var(--clr-primary-500);
+    text-decoration: none;
+}
+
+/* visited link */
+.profile__bottom a:visited {
+    color: var(--clr-primary-500);
+}
+
+/* mouse over link */
+.profile__bottom a:hover {
+    color: var(--clr-primary-100);
+}
+
+/* selected link */
+.profile__bottom a:active {
+    color: var(--clr-primary-100);
+}
+
+.activated:visited:not(:hover) {
+    color: var(--clr-primary-100);
+}
+
+.card {
+    display: grid;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    /* Elimination halo effect on bottom corner ( color overlapping) */
+    border-bottom-left-radius: calc(var(--border-radius) * 2);
+    border-bottom-right-radius: calc(var(--border-radius) * 2);
+
+
+}
+
+.card-top {
+    min-height: 2.875rem;
+    margin-right: 1rem;
+}
+
+.card-bottom {
+    background-color: var(--clr-primary-800);
+    border-radius: 1rem;
+
+    padding: var(--padding-main);
+    z-index: 999;
+}
+.card h2 {
+    font-size: var(--fs-400);
+}
+
+.card h3 {
+    font-size: var(--fs-700);
+}
+
+.card p {
+    font-size: var(--fs-300);
+}
+
+.card-top {
+    background-repeat: no-repeat;
+    background-position: right 0 top -10px;
+}
+
+
+.work-card .card-top {
+    background-image: url(../images/icon-work.svg);
+}
+
+.play-card .card-top {
+    background-image: url(../images/icon-play.svg);
+}
+
+.study-card .card-top {
+    background-image: url(../images/icon-study.svg);
+}
+
+.exercise-card .card-top {
+    background-image: url(../images/icon-exercise.svg);
+    background-position: right 0 top 0;
+}
+
+.social-card .card-top {
+    background-image: url(../images/icon-social.svg);
+}
+
+.self-care-card .card-top {
+    background-image: url(../images/icon-self-care.svg);
+}
+
+
+.card-bottom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.card-type {
+    font-weight: var(--fw-regular);
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.button .dots {
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+}
+
+.button::before,
+.button::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: var(--clr-primary-100);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.button::before {
+    top: 6px;
+    left: 0;
+}
+
+
+.button::after {
+    top: 6px;
+    right: 0;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card-bottom-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card-bottom-container h3 {
+    line-height: 1.2;
+    font-weight: var(--fw-light);
+}
+
+.card-bottom-container p {
+    color: var(--clr-primary-500);
+
+}
+
+
+.tilt-card {
+    transition: transform 0.3s;
+}
+
+.tilt-card:hover {
+    transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) scale(1.05);
+}
