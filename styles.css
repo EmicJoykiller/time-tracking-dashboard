@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+S p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-primary-400: hsl(246, 80%, 60%);
+  --clr-primary-900: hsl(226, 43%, 10%);
+  --clr-primary-800: hsl(235, 46%, 20%);
+  --clr-primary-500: hsl(235, 45%, 61%);
+  --clr-primary-200: hsl(236, 100%, 87%);
+  --clr-primary-100: hsl(0, 0%, 100%);
+
+  --clr-card-header-work: hsl(15, 100%, 70%);
+  --clr-card-header-play: hsl(195, 74%, 62%);
+  --clr-card-header-study: hsl(348, 100%, 68%);
+  --clr-card-header-excersie: hsl(145, 58%, 55%);
+  --clr-card-header-social: hsl(264, 64%, 52%);
+  --clr-card-header-self-care: hsl(43, 84%, 65%);
+
+  --ff-primary: "Rubik", sans-serif;
+
+  --fs-300: 0.9375rem;
+
+  --fs-400: 1.125rem;
+
+  --fs-600: 2.5rem;
+
+  --fs-700: 3.5rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  --border-radius: 1rem;
+  --padding-main: 1.5rem;
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.bg-card-800 {
+  background-color: var(--clr-primary-800);
+}
+
+.bg-card-header-work {
+  background-color: var(--clr-card-header-work);
+}
+
+.bg-card-header-play {
+  background-color: var(--clr-card-header-play);
+}
+
+.bg-card-header-study {
+  background-color: var(--clr-card-header-study);
+}
+
+.bg-card-header-excersie {
+  background-color: var(--clr-card-header-excersie);
+}
+
+.bg-card-header-social {
+  background-color: var(--clr-card-header-social);
+}
+
+.bg-card-header-self-care {
+  background-color: var(--clr-card-header-self-care);
+}
+
+.fw-light {
+  font-weight: var(--fw-light);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
