@@ -24,7 +24,44 @@ fetch("/data.json")
                 current.textContent = data[index].timeframes[timeframe].current + "hrs";
                 const reducedName = timeframe.replace(/ly$/i, "");
                 const goodName = reducedName.replace(/i/i, "y");
+
+                previous.textContent =
+            "Last " +
+            goodName +
+            " - " +
+            data[index].timeframes[timeframe].previous +
+            "hrs";
+          links.forEach((link) => link.classList.remove("activated"));
+          link.classList.add("activated");
             })
         })
     })
-  });
+  }).catch((error) => console.error(error));
+
+
+const tiltCards = document.querySelectorAll(".tilt-card");
+
+tiltCards.forEach((card) => {
+  card.addEventListener("mousemove", handleMouseMove);
+  card.addEventListener("mouseout", handleMouseOut);
+});
+
+function handleMouseMove(event) {
+  const card = event.currentTarget;
+  const cardRect = card.getBoundingClientRect();
+  const cardCenterX = cardRect.left + cardRect.width / 2;
+  const cardCenterY = cardRect.top + cardRect.height / 2;
+
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  const rotateX = (mouseY - cardCenterY) / 20;
+  const rotateY = (mouseX - cardCenterX) / 20;
+
+  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+}
+
+function handleMouseOut(event) {
+  const card = event.currentTarget;
+  card.style.transform = "";
+}
